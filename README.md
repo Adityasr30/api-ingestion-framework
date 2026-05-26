@@ -8,7 +8,7 @@ A config-driven, modular framework built on **Python** and **PySpark** in **Data
 
 This framework ingests transactional data (bills, items, customer details, pricing) from REST API sources into a data lakehouse landing layer. It is designed to be reusable across multiple API sources and outlets by driving all ingestion parameters through a per-outlet JSON config file.
 
-The source system used as a reference implementation is **Posist** - a restaurant management platform - ingesting bill-level data across multiple food court outlets.
+The source system used as a reference implementation is **Posist**, a restaurant management platform, ingesting bill-level data across multiple food court outlets.
 
 ---
 
