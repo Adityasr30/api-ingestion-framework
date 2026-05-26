@@ -8,7 +8,7 @@ A config-driven, modular framework built on **Python** and **PySpark** in **Data
 
 This framework ingests transactional data (bills, items, customer details, pricing) from REST API sources into a data lakehouse landing layer. It is designed to be reusable across multiple API sources and outlets by driving all ingestion parameters through a per-outlet JSON config file.
 
-The source system used as a reference implementation is **Posist** — a restaurant management platform — ingesting bill-level data across multiple food court outlets.
+The source system used as a reference implementation is **Posist** - a restaurant management platform - ingesting bill-level data across multiple food court outlets.
 
 ---
 
@@ -65,7 +65,7 @@ api-source-ingestion/
 
 ## Notebooks
 
-### 1. `utility_api.ipynb` — API Client & ADLS Writer
+### 1. `utility_api.ipynb` - API Client & ADLS Writer
 
 Defines the `APIClient` class for interacting with REST APIs, supporting multiple authentication methods.
 
@@ -95,7 +95,7 @@ write_api_response(response, target_path="abfss://landing@<account>.dfs.core.win
 
 ---
 
-### 2. `utility_timestamps.ipynb` — Timestamp Utilities
+### 2. `utility_timestamps.ipynb` - Timestamp Utilities
 
 Provides helper functions for Unix timestamp generation and IST (Indian Standard Time) conversion.
 
@@ -124,7 +124,7 @@ current_date = get_current_date()
 
 ---
 
-### 3. `posist_bills_ingestion.ipynb` — Main Ingestion Notebook
+### 3. `posist_bills_ingestion.ipynb` - Main Ingestion Notebook
 
 Ingests bill data from the Posist API to the ADLS Gen2 landing layer. Driven entirely by a per-outlet JSON config file.
 
@@ -162,7 +162,7 @@ landing/posist/bills/haridwar_food_court/pending/2026-05-26/posist_bills_haridwa
 
 ---
 
-### 4. `flatten_nested_json.ipynb` — Nested JSON Flattening Utility
+### 4. `flatten_nested_json.ipynb` - Nested JSON Flattening Utility
 
 Reusable PySpark utility for flattening deeply nested JSON structures. Used in downstream Silver layer processing.
 
@@ -176,7 +176,7 @@ df_flat = flatten_structs(nested_df)
 df_flat = flatten_df(df, arrays_to_not_explode=["products"])
 ```
 
-**Example — Input schema:**
+**Example - Input schema:**
 ```
 root
  └── data: struct
@@ -297,7 +297,7 @@ After each successful run, `watermark_old` is updated in the config file on ADLS
 To onboard a new API source:
 
 1. Create a new config JSON for each outlet/entity following the same structure.
-2. Reuse `utility_api.ipynb` — just change the `base_url` and `auth` type.
+2. Reuse `utility_api.ipynb` - just change the `base_url` and `auth` type.
 3. Reuse `utility_timestamps.ipynb` as-is for any timestamp-based pagination.
 4. Create a new ingestion notebook following the same pattern as `posist_bills_ingestion.ipynb`.
 5. Use `flatten_nested_json.ipynb` downstream in Silver processing for any nested response structure.
