@@ -1,0 +1,15 @@
+{
+    "access_token": "<your-bearer-token>",
+    "active": true,
+    "customer_key": "<your-customer-key>",
+    "history_load": {
+        "enabled": false,
+        "end_date": "2023-01-01 00:00:00",
+        "start_date": "2023-01-01 00:00:00"
+    },
+    "is_highway": 1,
+    "outlet": "haridwar_food_court",
+    "target_path": "landing/posist/bills/haridwar_food_court/pending",
+    "watermark_new": "2026-05-26 00:00:00",
+    "watermark_old": "2026-05-26 00:00:00"
+}
