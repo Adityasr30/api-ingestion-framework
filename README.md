@@ -49,10 +49,12 @@ ADLS Gen2 - Silver Layer (Delta tables)
 ```
 api-source-ingestion/
 │
-├── utility_api.ipynb                        # APIClient class + ADLS writer
-├── utility_timestamps.ipynb                 # Unix timestamp + IST conversion utilities
-├── posist_bills_ingestion.ipynb             # Main ingestion notebook (Posist source)
-├── flatten_nested_json.ipynb                # Reusable nested JSON flattening utility
+├── src/
+│   └── purchase_orders/
+│       ├── utility_api.ipynb                # APIClient class + ADLS writer
+│       └── utility_timestamps.ipynb         # Unix timestamp + IST conversion utilities
+│       └── posist_bills_ingestion.ipynb     # Main ingestion notebook (Posist source)
+│       └── flatten_nested_json.ipynb        # Reusable nested JSON flattening utility
 │
 ├── config/
 │   └── posist/
