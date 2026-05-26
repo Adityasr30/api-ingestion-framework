@@ -157,7 +157,7 @@ Ingests bill data from the Posist API to the ADLS Gen2 landing layer. Driven ent
 ```
 Example:
 ```
-landing/posist/bills/haridwar_food_court/pending/2026-05-26/posist_bills_haridwar_food_court_20260526_1.json
+landing/posist/bills/<outlet>/pending/2026-05-26/<outlet>_20260526_1.json
 ```
 
 ---
